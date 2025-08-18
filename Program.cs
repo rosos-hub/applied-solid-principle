@@ -68,8 +68,7 @@ namespace AppliedSOLIDPrinciple
 
             var apiClient = new ISP.ApiClient(config);
             apiClient.CallApi();
-
-      
+                  
             config.GetTimeoutInSeconds();
 
             #endregion
@@ -85,6 +84,7 @@ namespace AppliedSOLIDPrinciple
             DIP.IReportExporter jsonExporter = new DIP.JsonExporter();
             var jsonReportGenerator = new DIP.ReportGenerator(jsonExporter);
             jsonReportGenerator.GenerateAndExportReport("Report 2 data");
+
             #endregion
         }
     }
